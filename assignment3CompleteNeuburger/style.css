@@ -1,0 +1,91 @@
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(100, 10px);
+    grid-template-rows: repeat(100, 10px);
+}
+
+.lightGrey{
+    width: 0;
+    height: 0;
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-right: 75px solid #aeb5bb;
+    transform: rotate(45deg);
+    grid-column: 5;
+    grid-row: 3;
+}
+
+.black{
+    width: 0;
+    height: 0;
+    border-top: 160px solid transparent;
+    border-bottom: 160px solid transparent;
+    border-right: 160px solid #1e1f20;
+    grid-row: 7;
+}
+
+.yellow{
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #d5aa45;
+    grid-row: 27;
+    grid-column: 5;
+}
+
+.white{
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 60px solid #ded4ca;
+    grid-row: 33;
+    grid-column: 5;
+}
+
+.white2{
+    width: 0;
+    height: 0;
+    border-top: 120px solid transparent;
+    border-bottom: 120px solid transparent;
+    border-left: 120px solid #ded4ca;
+    grid-row: 4;
+    grid-column: 17;
+}
+
+.lightGrey2{
+    width: 0;
+    height: 0;
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-right: 75px solid #aeb5bb;
+    transform: rotate(-45deg);
+    grid-row: 29;
+    grid-column: 16;
+}
+
+.red{
+    width: 0;
+    height: 0;
+    border-top: 210px solid transparent;
+    border-bottom: 210px solid transparent;
+    border-right: 210px solid #af1405;
+    grid-row: 7;
+    grid-column: 17;
+}
+
+.darkGrey{
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-top: 90px solid #706569;
+    grid-row: 7;
+    grid-column: 20;
+}
