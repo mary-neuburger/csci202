@@ -1,0 +1,13 @@
+body{
+    margin: 50px;
+}
+
+#people{
+    float: left;
+    margin-left: 50px;
+    margin-right: 100px;
+}
+
+#places{
+    margin-top: 33px;
+}
