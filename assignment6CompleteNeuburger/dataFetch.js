@@ -1,4 +1,4 @@
-$.getJSON('http://api.open-notify.org/astros.json', function(data) {
+$.getJSON('https://mary-neuburger.github.io/csci202/assignment6CompleteNeuburger/astros.json', function(data) {
     
     data["people"].forEach(function (f){
 
