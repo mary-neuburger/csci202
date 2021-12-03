@@ -21,7 +21,7 @@ function decrementCount(){
     if(testCount == 0){
         testCount = testCount;
     }
-    if(testCount == 1){
+    else if(testCount == 1){
         testCount--;
         document.getElementById("SWSH001Image").style.opacity = 0.5;
     }
