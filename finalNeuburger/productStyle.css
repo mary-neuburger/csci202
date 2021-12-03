@@ -1,0 +1,26 @@
+.productCluster{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -.375rem;
+}
+
+.productUnique{
+    display: flex;
+    flex-direction: column;
+    margin: .375rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.productImage{
+    margin: 0 auto 0;
+}
+
+.counter{
+    display: flex;
+    justify-content: center;
+}
+
+.counterValue{
+    margin: 0 2rem 0;
+}
