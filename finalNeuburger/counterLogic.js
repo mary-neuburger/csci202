@@ -1,33 +1,36 @@
-var testCount = localStorage.getItem("testCount") || 0;
-
 window.onload = function(){
-    document.getElementById("SWSH001").innerHTML = testCount;
-    if(testCount == 0){
-        document.getElementById("SWSH001Image").style.opacity = 0.5;
-    }
-    else{
-        document.getElementById("SWSH001Image").style.opacity = 1;
+    var countersInit = document.getElementsByClassName("productUnique");
+    var i;
+    for(i = 0; i < countersInit.length; i++){
+        var id = countersInit[i].childNodes[5].childNodes[3].id;
+        countersInit[i].childNodes[5].childNodes[3].innerText = localStorage.getItem(id) || 0;
+        localStorage.setItem(String(id), parseInt(countersInit[i].childNodes[5].childNodes[3].innerText))
+        if(countersInit[i].childNodes[5].childNodes[3].innerText == "0"){
+            countersInit[i].childNodes[1].style.opacity = 0.5;
+        } 
     }
 }
 
-function incrementCount(){
-    testCount++;
-    document.getElementById("SWSH001Image").style.opacity = 1;
-    localStorage.setItem("testCount", testCount);
-    document.getElementById("SWSH001").innerHTML = testCount;
+function incrementCount(element){
+    var count = parseInt(element.parentNode.childNodes[3].innerText);
+    count++;
+    element.parentNode.parentNode.childNodes[1].style.opacity = 1;
+    localStorage.setItem(String(element.parentNode.childNodes[3].id), count);
+    element.parentNode.childNodes[3].innerText = count;
 }
 
-function decrementCount(){
-    if(testCount == 0){
-        testCount = testCount;
+function decrementCount(element){
+    var count = parseInt(element.parentNode.childNodes[3].innerText);
+    if(count == 0){
+        count = count;
     }
-    else if(testCount == 1){
-        testCount--;
-        document.getElementById("SWSH001Image").style.opacity = 0.5;
+    else if(count == 1){
+        count--;
+        element.parentNode.parentNode.childNodes[1].style.opacity = 0.5;
     }
     else{
-        testCount--;
+        count--;
     }
-    localStorage.setItem("testCount", testCount);
-    document.getElementById("SWSH001").innerHTML = testCount;
+    localStorage.setItem(String(element.parentNode.childNodes[3].id), count);
+    element.parentNode.childNodes[3].innerText = count;
 }
